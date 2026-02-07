@@ -1,0 +1,13 @@
+langgraph
+langchain
+langchain-groq
+supabase
+tavily-python
+firecrawl-py
+pydantic
+python-dotenv
+thefuzz
+python-Levenshtein
+schedule
+python-telegram-bot
+duckduckgo-search

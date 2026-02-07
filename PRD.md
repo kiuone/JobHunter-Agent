@@ -28,10 +28,20 @@ Sistema de agentes autônomos ("Agentic AI") em Python para monitoramento contí
   3. Prioriza encontrar o link direto de inscrição.
   4. Envia o conteúdo bruto para o Analista.
 
-### Nó B: The Analyst (Analista)
+### Nó B: The Analyst (Analyst)
 - **Input:** Texto bruto da vaga.
 - **Processamento (LLM):**
-  1. Extrai JSON estruturado: `deadline`, `location`, `work_model`, `salary`, `requirements`.
+  1. Extrai JSON estruturado com campos estendidos:
+     - `application_start_date`: Data de início das inscrições
+     - `application_deadline`: Data limite
+     - `location`: Localização
+     - `work_model`: Presencial, Híbrido, Remoto
+     - `weekly_hours`: Carga horária
+     - `salary`: Valor da bolsa/salário
+     - `desired_profile`: Perfil buscado
+     - `company_description`: Sobre a empresa
+     - `area`: Área de atuação do estágio
+     - `requirements`: Ferramentas, Habilidades, Idiomas
   2. Aplica Filtro Geográfico:
      - **Prioridade:** SP, MG, MT, SC, PR.
      - **Aceitável:** Resto do BR (Exceto exclusões), América do Sul, Global.
